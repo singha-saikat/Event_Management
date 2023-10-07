@@ -8,6 +8,7 @@ import './index.css'
 import Layout from './Layout/Layout';
 import Error from './Components/Error';
 import Home from './Pages/Home';
+import Gallery from './Pages/Gallery';
 
 
 const router = createBrowserRouter([
@@ -20,6 +21,11 @@ const router = createBrowserRouter([
         path: "/",
         element:<Home></Home>,
         loader: () => fetch('public/Services.json')
+      },
+      {
+        path: "/gallery",
+        element:<Gallery></Gallery>,
+        
       },
       
       
