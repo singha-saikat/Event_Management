@@ -9,6 +9,7 @@ import Layout from './Layout/Layout';
 import Error from './Components/Error';
 import Home from './Pages/Home';
 
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -18,7 +19,10 @@ const router = createBrowserRouter([
       {
         path: "/",
         element:<Home></Home>,
-      }
+        loader: () => fetch('public/Services.json')
+      },
+      
+      
     ]
   },
 ]);

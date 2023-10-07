@@ -1,5 +1,6 @@
 import { Link, NavLink } from "react-router-dom";
 
+
 const Navbar = () => {
   const navLink = (
     <div className="flex gap-5   ">
@@ -7,19 +8,20 @@ const Navbar = () => {
         <NavLink to="/">Home</NavLink>
       </li>
       <li>
-        <NavLink to="/login">Services</NavLink>
+        <NavLink to="/login"  className="hover:text-red-500">Services</NavLink>
       </li>
       <li>
-        <NavLink to="/register">Gallery</NavLink>
+        <NavLink to="/register" className="hover:text-red-500" >Gallery</NavLink>
       </li>
       <li>
-        <NavLink to="/orders">Review</NavLink>
+        <NavLink to="/orders" className="hover:text-red-500" >Review</NavLink>
       </li>
     </div>
   );
 
   return (
     <div>
+      
       <div className="navbar bg-[#333231] text-slate-400">
         <div className="navbar-start">
           <div className="dropdown">

@@ -1,5 +1,6 @@
-/* eslint-disable no-undef */
 /* eslint-disable no-unused-vars */
+/* eslint-disable no-undef */
+
 import { useEffect } from "react";
 
 const Banner = () => {
@@ -24,8 +25,8 @@ const Banner = () => {
 
   return (
     <div>
-      <div className="relative h-[92vh]  font-sans pt-20">
-        <h1 className="text-5xl uppercase text-center text-white font-roboto ">
+      <div className="relative  font-sans pt-20 mb-4">
+        <h1 className="text-5xl uppercase text-center text-slate-200 font-roboto ">
           Its time to celebrate!{" "}
           <span className="text-blue-600 font-semibold">
             The <br />
@@ -73,7 +74,7 @@ const Banner = () => {
               />
             </div>
           </div>
-          <div className="swiper-pagination"></div>
+          {/* <div className="swiper-pagination"></div> */}
         </div>
       </div>
     </div>
