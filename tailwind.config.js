@@ -4,12 +4,17 @@ export default {
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
-  theme: {
+   theme: {
     extend: {
-      fontFamily:{
-        roboto : 'Roboto, sans-serif'
+      fontFamily: {
+        roboto: 'Roboto, sans-serif',
+        
       },
-     
+      backgroundImage: {
+        'hero-pattern': "url('src/assets/picture.png')",
+        
+      }
+      
     },
   },
   daisyui: {
@@ -17,4 +22,3 @@ export default {
   },
   plugins: [require("daisyui")],
 }
-

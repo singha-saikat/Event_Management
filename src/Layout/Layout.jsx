@@ -3,9 +3,9 @@ import Navbar from "../Components/Navbar";
 
 const Layout = () => {
     return (
-        <div className="bg-[#212221] px-2 ">
+        <div className="bg-[#212221] ">
             <Navbar></Navbar>
-            <div className="max-w-6xl mx-auto">
+            <div className="max-w-6xl mx-auto px-2 ">
               <Outlet></Outlet>
             </div>
         </div>

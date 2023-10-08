@@ -3,42 +3,48 @@
     "id": 1,
     "title": "Venue Selection",
     "image": "https://i.ibb.co/VNHFQ01/female-wedding-planner-working-ceremony.jpg",
-    "shortDescription": "Discover the perfect venue for your special occasion with our  guidance.",
-    "description": "Choose from a variety of stunning venues for your event. Whether you're planning a wedding, birthday party, or any special occasion, we offer a range of indoor and outdoor locations to suit your needs. Our experienced team will help you select the ideal setting to create lasting memories. From elegant ballrooms to picturesque gardens, we have the perfect venue waiting for you. Create a beautiful atmosphere for your guests and make your event unforgettable. Contact us today to explore our venue selection options."
+    "shortDescription": "Discover the perfect venue for your special occasion with our guidance.",
+    "description": "Choose from a variety of stunning venues for your event. Whether you're planning a wedding, birthday party, or any special occasion, we offer a range of indoor and outdoor locations to suit your needs. Our experienced team will help you select the ideal setting to create lasting memories. From elegant ballrooms to picturesque gardens, we have the perfect venue waiting for you. Create a beautiful atmosphere for your guests and make your event unforgettable.",
+    "price": 5000
   },
   {
     "id": 2,
     "title": "Invitation Cards",
     "image": "https://i.ibb.co/n1MkMvp/3157149.jpg",
     "shortDescription": "Customize your event with beautifully designed invitation cards.",
-    "description": "Elevate your event with our exquisite invitation cards. Our custom-designed cards will set the tone for your special occasion. From elegant wedding invitations to fun and colorful birthday cards, we offer a wide range of styles to choose from. Personalize your cards with your unique message and event details. Our professional designers will work closely with you to create stunning and memorable invitations that reflect your vision. Impress your guests and make a statement with our invitation cards. Let us bring your ideas to life and make your event truly special."
+    "description": "Elevate your event with our exquisite invitation cards. Our custom-designed cards will set the tone for your special occasion. From elegant wedding invitations to fun and colorful birthday cards, we offer a wide range of styles to choose from. Personalize your cards with your unique message and event details. Our professional designers will work closely with you to create stunning and memorable invitations that reflect your vision.",
+    "price": 250
   },
   {
     "id": 3,
     "title": "Entertainment",
     "image": "https://i.ibb.co/thyQXJ1/musicial-music-live-band-performing-stage-with-different-lights.jpg",
     "shortDescription": "Book talented entertainers to make your event memorable.",
-    "description": "Entertainment plays a vital role in making your event memorable. Whether it's a live band, a DJ, or other performers, we provide top-notch entertainment services that will keep your guests engaged and excited. Our talented entertainers will create a lively and enjoyable atmosphere, ensuring everyone has a fantastic time. With a wide range of options to choose from, you can tailor the entertainment to suit your event's theme and style. Let us help you make your event unforgettable with our entertainment services."
+    "description": "Entertainment plays a vital role in making your event memorable. Whether it's a live band, a DJ, or other performers, we provide top-notch entertainment services that will keep your guests engaged and excited. Our talented entertainers will create a lively and enjoyable atmosphere, ensuring everyone has a fantastic time.",
+    "price": 8000
   },
   {
     "id": 4,
     "title": "Food and Drinks",
     "image": "https://i.ibb.co/7NYrxR0/fried-nuggets-sweet-chili-sauce.jpg",
     "shortDescription": "Delight your guests with a variety of delicious food and drinks.",
-    "description": "Good food and drinks are the heart of any successful event. Treat your guests to a delectable culinary experience with our catering services. From mouthwatering dishes to a delightful selection of beverages, our menu is designed to satisfy all tastes. Our expert chefs and bartenders will ensure that every bite and sip is a memorable one. Whether it's a formal banquet or a casual gathering, we have the perfect menu for your event. Make your event unforgettable with our food and drinks."
+    "description": "Good food and drinks are the heart of any successful event. Treat your guests to a delectable culinary experience with our catering services. From mouthwatering dishes to a delightful selection of beverages, our menu is designed to satisfy all tastes. Our expert chefs and bartenders will ensure that every bite and sip is a memorable one.",
+    "price": 3500
   },
   {
     "id": 5,
     "title": "Photos and Videos",
     "image": "https://i.ibb.co/hfCDQbv/press-reporter-fallowing-leads-case.jpg",
-    "shortDescription": "Capture beautiful moments with professional photography ",
-    "description": "Preserve the memories of your event with our professional photography and videography services. Our skilled photographers and videographers will capture every special moment, from the first smile to the final farewell. With state-of-the-art equipment and an eye for detail, we ensure that your event's essence is beautifully documented. Whether it's a wedding, anniversary, or any celebration, trust us to create stunning visuals that you'll treasure forever. Relive the joy, laughter, and love of your event through our photos and videos."
+    "shortDescription": "Capture beautiful moments with professional photography",
+    "description": "Preserve the memories of your event with our professional photography and videography services. Our skilled photographers and videographers will capture every special moment, from the first smile to the final farewell. With state-of-the-art equipment and an eye for detail, we ensure that your event's essence is beautifully documented.",
+    "price": 1200
   },
   {
     "id": 6,
     "title": "Custom Foods",
     "image": "https://i.ibb.co/NpTTnJw/decorated-banquet-table-with-snacks-wedding.jpg",
     "shortDescription": "Enjoy a custom menu crafted by our talented chefs.",
-    "description": "Indulge in a culinary experience like no other with our custom food offerings. Our skilled chefs will create a bespoke menu tailored to your preferences and event theme. From exquisite appetizers to mouthwatering main courses and gourmet desserts, we bring a world of flavors to your table. Our commitment to quality and presentation ensures that your event's cuisine is nothing short of extraordinary. Savor the taste of luxury with our custom foods and elevate your event's dining experience."
+    "description": "Indulge in a culinary experience like no other with our custom food offerings. Our skilled chefs will create a bespoke menu tailored to your preferences and event theme. From exquisite appetizers to mouthwatering main courses and gourmet desserts, we bring a world of flavors to your table.",
+    "price": 5000
   }
 ]
