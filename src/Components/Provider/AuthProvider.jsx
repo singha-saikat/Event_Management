@@ -11,20 +11,25 @@ import { createContext, useEffect, useState } from "react";
 
 const AuthProvider = ({children}) => {
     const [user,setUser] =useState(null);
+    const [loading,setLoading] =useState(true)
 
     const createUser = (email,password) => {
+        setLoading(true);
         return createUserWithEmailAndPassword(auth, email, password);
     }
     const signIn = (email,password) =>{
-          return signInWithEmailAndPassword(auth, email, password);
+        setLoading(true);
+        return signInWithEmailAndPassword(auth, email, password);
     }
     const logout = () => {
+        setLoading(true);
         return signOut(auth);
     }
     useEffect(() => {
         const unSubscribe = onAuthStateChanged(auth,currentUser => {
             console.log('user in the auth state changed',currentUser);
             setUser(currentUser)
+            setLoading(false);
     
         });
         return () => {
@@ -35,7 +40,9 @@ const AuthProvider = ({children}) => {
         user,
         createUser,
         signIn,
-        logout
+        logout,
+        setLoading,
+        loading
         
 
 
