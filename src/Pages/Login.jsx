@@ -29,6 +29,7 @@ const Login = () => {
     signInWithPopup(auth, googleProvider)
       .then((result) => {
         console.log(result.user);
+        navigate('/')
       })
       .catch((error) => {
         console.log(error.message);
@@ -62,6 +63,7 @@ const Login = () => {
         progress: undefined,
         theme: "colored",
       });
+      navigate("/")
     } catch (error) {
       console.error(error);
 
