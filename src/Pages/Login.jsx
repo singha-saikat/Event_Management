@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import {  useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { Link } from "react-router-dom";
@@ -10,18 +10,18 @@ import {
   signInWithPopup,
 } from "firebase/auth";
 import app from "../Firebase/Firebase.config";
-import { AuthContext } from "../Components/Provider/AuthProvider";
+// import { AuthContext } from "../Components/Provider/AuthProvider";
 
 const auth = getAuth(app);
 const googleProvider = new GoogleAuthProvider();
 
 const Login = () => {
-  const {setLoading} =useContext(AuthContext)
+  // const {setLoading} =useContext(AuthContext)
   const [emailError, setEmailError] = useState("");
   const [passwordError, setPasswordError] = useState("");
 
   const handleGoogleSignIn = () => {
-    setLoading(true);
+    // setLoading(true);
     signInWithPopup(auth, googleProvider)
       .then((result) => {
         console.log(result.user);

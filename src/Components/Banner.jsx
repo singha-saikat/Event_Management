@@ -25,7 +25,7 @@ const Banner = () => {
 
   return (
     <div>
-      <div className="relative  font-sans pt-20 mb-4">
+      <div className="relative  font-sans pt-20 mb-4 ">
         <h1 className="text-5xl uppercase text-center text-inherit font-roboto ">
           Its time to celebrate!{" "}
           <span className="text-blue-600 font-semibold">

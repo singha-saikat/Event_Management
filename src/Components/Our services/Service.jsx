@@ -4,13 +4,13 @@ const Service = ({ service }) => {
   const { title, image, shortDescription, price,id } = service;
   console.log(title, image);
   return (
-    <div className="">
+    <div className="max-w-6xl mx-auto">
       <div className="card bg-base-100 shadow-xl">
         <figure className="h-60">
           <img src={image} alt="" />
         </figure>
         <div className="card-body ">
-          <h2 className="card-title ">{title}</h2>
+          <h2 className="card-title ">{title}</h2>npm
           <p>{shortDescription}</p>
           <span className="text-2xl font-semibold">${price}</span>
         </div>
