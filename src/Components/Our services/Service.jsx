@@ -15,7 +15,9 @@ const Service = ({ service }) => {
           <span className="text-2xl font-semibold">${price}</span>
         </div>
         <div className="card-actions justify-center mb-2">
-          <button onClick={<Link to={`/service/${id}`}></Link>} className="btn btn-primary">View Details</button>
+          <Link to={`/services/${id}`}>
+          <button  className="btn btn-primary">View Details</button>
+          </Link>
         </div>
       </div>
     </div>

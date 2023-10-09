@@ -3,7 +3,7 @@ import Navbar from "../Components/Navbar";
 
 const Layout = () => {
     return (
-        <div className="bg-[#212221] ">
+        <div className="">
             <Navbar></Navbar>
             <div className="max-w-6xl mx-auto px-2 ">
               <Outlet></Outlet>

@@ -12,6 +12,9 @@ import Gallery from './Pages/Gallery';
 import Login from './Pages/Login';
 import AuthProvider from './Components/Provider/AuthProvider';
 import Register from './Components/Register';
+import Services from './Components/Our services/Services';
+import EventDetails from './Components/EventDetails';
+
 
 
 
@@ -38,7 +41,17 @@ const router = createBrowserRouter([
       {
         path:"/register",
         element:<Register></Register>
-      }
+      },
+      {
+        path:"/services",
+        element: <Services></Services>,
+        loader: () => fetch('public/Services.json')
+      },
+      {
+        path:"/services/:id",
+        element: <EventDetails></EventDetails>,
+        loader: () => fetch('public/Services.json')
+      },
       
       
     ]
