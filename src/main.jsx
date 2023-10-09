@@ -14,6 +14,7 @@ import AuthProvider from './Components/Provider/AuthProvider';
 import Register from './Components/Register';
 import Services from './Components/Our services/Services';
 import EventDetails from './Components/EventDetails';
+import PrivateRoutes from './Components/PrivateRoutes';
 
 
 
@@ -49,7 +50,7 @@ const router = createBrowserRouter([
       },
       {
         path:"/services/:id",
-        element: <EventDetails></EventDetails>,
+        element: <PrivateRoutes><EventDetails></EventDetails></PrivateRoutes>,
         loader: () => fetch('public/Services.json')
       },
       
