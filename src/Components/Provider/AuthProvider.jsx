@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
-import { getAuth,createUserWithEmailAndPassword,signInWithEmailAndPassword } from "firebase/auth";
+import { getAuth,createUserWithEmailAndPassword,signInWithEmailAndPassword, signOut, onAuthStateChanged } from "firebase/auth";
 import app from "../../Firebase/Firebase.config";
-import { createContext, useState } from "react";
+import { createContext, useEffect, useState } from "react";
 
 
 
@@ -18,10 +18,24 @@ const AuthProvider = ({children}) => {
     const signIn = (email,password) =>{
           return signInWithEmailAndPassword(auth, email, password);
     }
+    const logout = () => {
+        return signOut(auth);
+    }
+    useEffect(() => {
+        const unSubscribe = onAuthStateChanged(auth,currentUser => {
+            console.log('user in the auth state changed',currentUser);
+            setUser(currentUser)
+    
+        });
+        return () => {
+            unSubscribe();
+        }
+      },[])
      const authInfo ={
         user,
         createUser,
-        signIn
+        signIn,
+        logout
         
 
 
