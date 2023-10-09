@@ -1,7 +1,7 @@
-import {  useState } from "react";
+import {  useContext, useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { FaGoogle } from "react-icons/fa";
 import {
   GoogleAuthProvider,
@@ -10,18 +10,22 @@ import {
   signInWithPopup,
 } from "firebase/auth";
 import app from "../Firebase/Firebase.config";
+import { AuthContext } from "../Components/Provider/AuthProvider";
 // import { AuthContext } from "../Components/Provider/AuthProvider";
 
 const auth = getAuth(app);
 const googleProvider = new GoogleAuthProvider();
 
 const Login = () => {
-  // const {setLoading} =useContext(AuthContext)
+  const {setLoading} =useContext(AuthContext)
+  const location = useLocation();
+  console.log(location);
+  const navigate = useNavigate();
   const [emailError, setEmailError] = useState("");
   const [passwordError, setPasswordError] = useState("");
 
   const handleGoogleSignIn = () => {
-    // setLoading(true);
+    setLoading(true);
     signInWithPopup(auth, googleProvider)
       .then((result) => {
         console.log(result.user);
@@ -44,7 +48,7 @@ const Login = () => {
     try {
       const userCredential = await signInWithEmailAndPassword(auth, email, password);
       const user = userCredential.user;
-
+      navigate(location?.state? location.state : "/")
       console.log(user);
       e.target.reset();
 

@@ -35,7 +35,7 @@ const Navbar = () => {
         </NavLink>
       </li>
       <li>
-        <NavLink to="/orders" className="hover:text-red-500">
+        <NavLink to="/review" className="hover:text-red-500">
           Review
         </NavLink>
       </li>
@@ -70,10 +70,10 @@ const Navbar = () => {
               {navLink}
             </ul>
           </div>
-          {/* <a className="btn btn-ghost normal-case text-xl">daisyUI</a> */}
-          <div>
-            <img className="w-20" src="public/eventmanagement.png" alt="" />
-          </div>
+          <a className="btn btn-ghost normal-case text-xl">EventfulWonders</a>
+          {/* <div>
+            <img className="w-20" src="https://i.ibb.co/SP5TqCx/PNG.png" alt="" />
+          </div> */}
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1 ">{navLink}</ul>
