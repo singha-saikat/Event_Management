@@ -11,7 +11,7 @@ const Gallery = () => {
   return (
     <div>
       <div className="mt-8">
-        <h1 className="text-slate-200 text-5xl text-center font-roboto mb-4">
+        <h1 className="text-inherit text-5xl text-center font-roboto mb-4">
           Our <span className="text-5xl text-yellow-600">Gallery</span>
         </h1>
         

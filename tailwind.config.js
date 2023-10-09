@@ -13,7 +13,10 @@ export default {
       backgroundImage: {
         'hero-pattern': "url('src/assets/picture.png')",
         
-      }
+      },
+      maxWidth: {
+        'none': 'none !important',
+      },
       
     },
   },

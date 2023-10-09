@@ -2,7 +2,7 @@ const AboutUs = () => {
   return (
     <div>
       <div className="mt-8">
-        <h1 className="text-slate-200 text-5xl text-center font-roboto mb-4">
+        <h1 className="text-inherit text-5xl text-center font-roboto mb-4">
           <span className="text-5xl text-violet-600">About</span> Us
         </h1>
       </div>

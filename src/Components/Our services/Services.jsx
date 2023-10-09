@@ -9,7 +9,7 @@ const Services = () => {
     <div>
       <div>
         <div>
-          <h1 className="text-slate-200 text-5xl text-center font-roboto">
+          <h1 className="text-inherit text-5xl text-center font-roboto">
             Our <span className="text-5xl text-blue-600">Services</span>
           </h1>
         </div>
