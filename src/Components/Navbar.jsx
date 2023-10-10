@@ -17,7 +17,7 @@ const Navbar = () => {
       });
   };
   const navLink = (
-    <div className="flex flex-col gap-5 md:flex-row  ">
+    <div className="flex flex-col gap-5 lg:flex-row  ">
       <li>
         <NavLink to="/">Home</NavLink>
       </li>

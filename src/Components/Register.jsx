@@ -5,6 +5,7 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { AuthContext } from "./Provider/AuthProvider";
 import { Link } from "react-router-dom";
+import { updateProfile } from 'firebase/auth';
 
 const Register = () => {
   const { createUser } = useContext(AuthContext);
@@ -35,10 +36,17 @@ const Register = () => {
     }
 
     createUser(email, password)
-      .then((result) => {
-        console.log(result.user);
-        e.target.reset();
-
+    .then((userCredential) => {
+      // User registered successfully, now update profile
+      const user = userCredential.user;
+      return updateProfile(user, {
+        displayName: name,
+        photoURL: photo,
+      });
+    })
+    .then(() => {
+      console.log("Profile updated");
+      e.target.reset();
         toast.success("Congratulations,  You are now part of Our Platform", {
           position: "top-right",
           autoClose: 5000,
