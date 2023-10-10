@@ -7,17 +7,14 @@ const Dashboard = () => {
 
   return (
     <div className="h-[80vh] flex flex-col justify-center items-center ">
-      {/* <h3>Your Profile</h3>
-        <p>Name: {user.displayName}</p>
-        <p>Email: {user.email}</p>
-        <p>Profile Image: <img src={user.photoURL} alt="User Profile" /></p> */}
+      
       <div className="card w-96 bg-base-100 shadow-xl bg-hero-pattern text-white">
         <figure className="px-10 pt-10">
           {
             user.photoURL &&
             <img
-            src="{user.photoURL
-            }"
+            src={user.photoURL}
+           
             
             className="rounded-xl"
           />

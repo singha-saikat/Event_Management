@@ -1,8 +1,16 @@
-# React + Vite
+## Q1 : Add at least 5 Project features mentioning different features and functionalities of your website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+- User Authentication and Sign Out:  
+  Ensure that user authentication is secure and protects user data. Use encryption and best practices for handling user credentials.Provide an option for logged-in users to securely log out of their accounts when they are done using the website.
 
-Currently, two official plugins are available:
+- Event Management Services:  
+  Display a list of event management services offered, such as wedding planning, corporate events, birthday parties, etc.Provide detailed information about each service, including descriptions, pricing, and any special packages or features.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Review Section:  
+  Feature a section where clients or customers can leave reviews and ratings for the services they have used. Implement a rating system (e.g., 5-star rating) to help users quickly gauge the quality of services based on others' experiences.
+
+- Private Router Functionality:  
+  Ensure that certain sections of the project, like user saved events, are protected and only accessible to logged-in users. Implement private routing to restrict access to these areas, enhancing security and user privacy.
+
+- Animated Gallery:  
+  Enhance user engagement with an animated gallery or slideshow displaying images and videos of past events. Animations can add a visually appealing aspect to the project, making it more dynamic and interactive.

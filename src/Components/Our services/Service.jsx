@@ -10,7 +10,7 @@ const Service = ({ service }) => {
           <img src={image} alt="" />
         </figure>
         <div className="card-body ">
-          <h2 className="card-title ">{title}</h2>npm
+          <h2 className="card-title ">{title}</h2>
           <p>{shortDescription}</p>
           <span className="text-2xl font-semibold">${price}</span>
         </div>

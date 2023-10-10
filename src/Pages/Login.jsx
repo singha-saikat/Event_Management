@@ -1,4 +1,4 @@
-import {  useContext, useState } from "react";
+import { useContext, useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { Link, useLocation, useNavigate } from "react-router-dom";
@@ -11,13 +11,12 @@ import {
 } from "firebase/auth";
 import app from "../Firebase/Firebase.config";
 import { AuthContext } from "../Components/Provider/AuthProvider";
-// import { AuthContext } from "../Components/Provider/AuthProvider";
 
 const auth = getAuth(app);
 const googleProvider = new GoogleAuthProvider();
 
 const Login = () => {
-  const {setLoading,signIn} =useContext(AuthContext)
+  const { setLoading} = useContext(AuthContext);
   const location = useLocation();
   console.log(location);
   const navigate = useNavigate();
@@ -29,7 +28,7 @@ const Login = () => {
     signInWithPopup(auth, googleProvider)
       .then((result) => {
         console.log(result.user);
-        navigate('/')
+        navigate("/");
       })
       .catch((error) => {
         console.log(error.message);
@@ -42,14 +41,17 @@ const Login = () => {
     const email = form.get("email");
     const password = form.get("password");
 
-    // Reset previous errors
     setEmailError("");
     setPasswordError("");
 
     try {
-      const userCredential = await signIn(auth, email, password);
+      const userCredential = await signInWithEmailAndPassword(
+        auth,
+        email,
+        password
+      );
       const user = userCredential.user;
-      navigate(location?.state? location.state : "/")
+      navigate(location?.state ? location.state : "/");
       console.log(user);
       e.target.reset();
 
@@ -63,18 +65,20 @@ const Login = () => {
         progress: undefined,
         theme: "colored",
       });
-      navigate("/")
+      setTimeout(() => {
+        navigate('/');
+      }, 2000); 
     } catch (error) {
       console.error(error);
 
       if (error.code === "auth/user-not-found") {
         setEmailError("No account found with this email");
-    } else if (error.code === "auth/wrong-password") {
+      } else if (error.code === "auth/wrong-password") {
         setPasswordError("Wrong password");
-    } else if (error.code === "auth/invalid-email") {
+      } else if (error.code === "auth/invalid-email") {
         setEmailError("Invalid email format");
-    } else {
-        setEmailError("An error occurred. Please try again."); // Set a generic error message
+      } else {
+        setEmailError("An error occurred. Please try again.");
         toast.error(error.message, {
           position: "top-right",
           autoClose: 3000,
@@ -85,20 +89,23 @@ const Login = () => {
           progress: undefined,
           theme: "colored",
         });
-    }
+      }
     }
   };
 
   return (
     <div className="hero min-h-screen max-w-none bg-gradient-to-r from-blue-500 to-indigo-600 text-slate-200 transition-all duration-500 ease-in-out">
-            <div className="hero-content flex flex-col md:flex-row items-center justify-center h-full w-full px-4">
-                <div className="text-center mb-8">
-                    <h1 className="text-5xl sm:text-4xl md:text-3xl font-bold animate__animated animate__fadeInDown ">
-                        Login now!
-                    </h1>
-                </div>
-                <div className="card flex-shrink-0 w-full md:max-w-md lg:max-w-lg xl:max-w-xl 2xl:max-w-2xl shadow-2xl bg-white transition-transform transform hover:scale-105">
-                    <form onSubmit={handleLogin} className="card-body text-slate-900 p-4 sm:p-6 md:p-8">
+      <div className="hero-content flex flex-col md:flex-row items-center justify-center h-full w-full px-4">
+        <div className="text-center mb-8">
+          <h1 className="text-5xl sm:text-4xl md:text-3xl font-bold animate__animated animate__fadeInDown ">
+            Login now!
+          </h1>
+        </div>
+        <div className="card flex-shrink-0 w-full md:max-w-md lg:max-w-lg xl:max-w-xl 2xl:max-w-2xl shadow-2xl bg-white transition-transform transform hover:scale-105">
+          <form
+            onSubmit={handleLogin}
+            className="card-body text-slate-900 p-4 sm:p-6 md:p-8"
+          >
             <div className="form-control">
               <label className="label">
                 <span className="label-text">Email</span>
@@ -110,7 +117,7 @@ const Login = () => {
                 className="input input-bordered w-full mt-2 p-2"
                 required
               />
-              {/* Display email error */}
+
               {emailError && <p className="text-red-500 mt-1">{emailError}</p>}
             </div>
             <div className="form-control mt-4">
@@ -124,8 +131,10 @@ const Login = () => {
                 className="input input-bordered w-full mt-2 p-2"
                 required
               />
-              {/* Display password error */}
-              {passwordError && <p className="text-red-500 mt-1">{passwordError}</p>}
+
+              {passwordError && (
+                <p className="text-red-500 mt-1">{passwordError}</p>
+              )}
             </div>
 
             <div className="form-control mt-6">

@@ -1,6 +1,6 @@
 const EventExplore = ({event}) => {
   return (
-    <div>
+    <div className="max-w-6xl mx-auto">
       <div className="h-screen mt-4">
         <img className="w-full " src={event.image} alt="" />
         <div className="mt-8 text-inherit bg-gray-300 p-4 rounded-md">

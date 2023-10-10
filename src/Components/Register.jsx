@@ -4,12 +4,13 @@ import { useContext, useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { AuthContext } from "./Provider/AuthProvider";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { updateProfile } from 'firebase/auth';
 
 const Register = () => {
   const { createUser } = useContext(AuthContext);
   const [regError, setRegError] = useState("");
+  const navigate = useNavigate();
   
  
 
@@ -37,7 +38,7 @@ const Register = () => {
 
     createUser(email, password)
     .then((userCredential) => {
-      // User registered successfully, now update profile
+      
       const user = userCredential.user;
       return updateProfile(user, {
         displayName: name,
@@ -45,11 +46,10 @@ const Register = () => {
       });
     })
     .then(() => {
-      console.log("Profile updated");
-      e.target.reset();
+        e.target.reset();
         toast.success("Congratulations,  You are now part of Our Platform", {
           position: "top-right",
-          autoClose: 5000,
+          autoClose: 1000,
           hideProgressBar: false,
           closeOnClick: true,
           pauseOnHover: true,
@@ -57,6 +57,9 @@ const Register = () => {
           progress: undefined,
           theme: "colored",
         });
+        setTimeout(() => {
+          navigate('/');
+        }, 2000); 
       })
       .catch((error) => {
         toast.error(error.message, {
