@@ -17,7 +17,7 @@ const auth = getAuth(app);
 const googleProvider = new GoogleAuthProvider();
 
 const Login = () => {
-  const {setLoading} =useContext(AuthContext)
+  const {setLoading,signIn} =useContext(AuthContext)
   const location = useLocation();
   console.log(location);
   const navigate = useNavigate();
@@ -47,7 +47,7 @@ const Login = () => {
     setPasswordError("");
 
     try {
-      const userCredential = await signInWithEmailAndPassword(auth, email, password);
+      const userCredential = await signIn(auth, email, password);
       const user = userCredential.user;
       navigate(location?.state? location.state : "/")
       console.log(user);
@@ -91,14 +91,14 @@ const Login = () => {
 
   return (
     <div className="hero min-h-screen max-w-none bg-gradient-to-r from-blue-500 to-indigo-600 text-slate-200 transition-all duration-500 ease-in-out">
-      <div className="hero-content flex items-center justify-center h-full w-full ">
-        <div className="text-center mb-8">
-          <h1 className="text-5xl font-bold animate__animated animate__fadeInDown">
-            Login now!
-          </h1>
-        </div>
-        <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-white transition-transform transform hover:scale-105">
-          <form onSubmit={handleLogin} className="card-body text-slate-900 p-6">
+            <div className="hero-content flex flex-col md:flex-row items-center justify-center h-full w-full px-4">
+                <div className="text-center mb-8">
+                    <h1 className="text-5xl sm:text-4xl md:text-3xl font-bold animate__animated animate__fadeInDown ">
+                        Login now!
+                    </h1>
+                </div>
+                <div className="card flex-shrink-0 w-full md:max-w-md lg:max-w-lg xl:max-w-xl 2xl:max-w-2xl shadow-2xl bg-white transition-transform transform hover:scale-105">
+                    <form onSubmit={handleLogin} className="card-body text-slate-900 p-4 sm:p-6 md:p-8">
             <div className="form-control">
               <label className="label">
                 <span className="label-text">Email</span>

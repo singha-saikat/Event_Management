@@ -16,6 +16,9 @@ import Services from './Components/Our services/Services';
 import EventDetails from './Components/EventDetails';
 import PrivateRoutes from './Components/PrivateRoutes';
 import ReviewsPage from './Pages/Review/ ReviewsPage';
+import Dashboard from './Components/Dashboard';
+import ContactForm from './Components/ContactForm';
+import AboutUs from './Components/AboutUs';
 
 
 
@@ -57,6 +60,18 @@ const router = createBrowserRouter([
         path:"/services/:id",
         element: <PrivateRoutes><EventDetails></EventDetails></PrivateRoutes>,
         // loader: () => fetch('public/Services.json')
+      },
+      {
+        path:"/dashboard",
+        element:<PrivateRoutes><Dashboard></Dashboard></PrivateRoutes>
+      },
+      {
+        path:"/contact",
+        element:<PrivateRoutes><ContactForm></ContactForm></PrivateRoutes>
+      },
+      {
+        path:"/aboutUs",
+        element:<AboutUs></AboutUs>
       },
       
       

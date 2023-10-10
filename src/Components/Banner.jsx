@@ -2,6 +2,7 @@
 /* eslint-disable no-undef */
 
 import { useEffect } from "react";
+import { Link } from "react-router-dom";
 
 const Banner = () => {
   useEffect(() => {
@@ -26,7 +27,7 @@ const Banner = () => {
   return (
     <div>
       <div className="relative  font-sans pt-20 mb-4 ">
-        <h1 className="text-5xl uppercase text-center text-inherit font-roboto ">
+        <h1 className=" text-3xl md:text-5xl uppercase text-center text-inherit font-roboto ">
           Its time to celebrate!{" "}
           <span className="text-blue-600 font-semibold">
             The <br />
@@ -34,7 +35,9 @@ const Banner = () => {
           </span>{" "}
         </h1>
         <div className="flex justify-center mt-6">
+          <Link to={"/contact"}>
           <button className="btn btn-info  rounded-sm">Contact Us</button>
+          </Link>
         </div>
         <div className="swiper mySwiper w-full py-12 mt-4">
           <div className="swiper-wrapper">

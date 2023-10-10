@@ -12,6 +12,7 @@ export default {
       },
       backgroundImage: {
         'hero-pattern': "url('src/assets/picture.png')",
+        'dashboard': "url('https://i.ibb.co/YXK2wdg/digital-tablet-online-learning.jpg')",
         
       },
       maxWidth: {

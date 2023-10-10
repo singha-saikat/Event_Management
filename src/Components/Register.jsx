@@ -13,6 +13,7 @@ const Register = () => {
  
 
   const handleRegister = (e) => {
+    
     e.preventDefault();
     const from = new FormData(e.currentTarget);
     const name = from.get("name");

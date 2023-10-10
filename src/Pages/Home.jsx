@@ -8,7 +8,7 @@ const Home = () => {
   return (
     <div>
       
-      <div className="max-w-6xl mx-auto">
+      <div className="max-w-6xl mx-auto px-2">
         <Banner></Banner>
         <Services></Services>
         <AboutUs></AboutUs>

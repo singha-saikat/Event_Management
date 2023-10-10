@@ -1,6 +1,8 @@
+import { Link } from "react-router-dom";
+
 const AboutUs = () => {
   return (
-    <div>
+    <div className="">
       <div className="mt-8">
         <h1 className="text-inherit text-5xl text-center font-roboto mb-4">
           <span className="text-5xl text-violet-600">About</span> Us
@@ -22,7 +24,9 @@ const AboutUs = () => {
             birthday parties, heartwarming baby showers, and more.. 
           </p>
           <div className="card-actions justify-center">
-          <button className="btn btn-info  rounded-lg">Contact Us</button>
+         <Link to={"/contact"}>
+         <button className="btn btn-info  rounded-lg">Contact Us</button>
+         </Link>
           </div>
         </div>
       </div>
